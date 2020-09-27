@@ -1,0 +1,31 @@
+body {
+    font-family: 'Noto Sans SC', Rubik;
+    text-align: center;
+}
+
+header {
+    color: black;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2em 35vw;
+}
+
+a {
+    color: rgb(179, 47, 161);
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 0px;
+        margin: 20px auto;
+    }
+    a {
+        display: block;
+        background-color: rgb(255, 231, 235);
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid pink;
+        border-radius: 10px;
+    }
+}

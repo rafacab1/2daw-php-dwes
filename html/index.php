@@ -26,5 +26,13 @@
 <p><a href="u3/estructurascontrol/ej3edad.php">3 Edad</a></p>
 <p><a href="u3/estructurascontrol/ej4cabecera.php">4 Cabecera</a></p>
 <p><a href="u3/estructurascontrol/ej5usuarios.php">5 Perfiles de usuario</a></p>
+<br>
+<p><a href="u3/bucles/ej1num110.php">1 Números del 1 al 10</a></p>
+<p><a href="u3/bucles/ej2numpares.php">2 Números pares</a></p>
+<p><a href="u3/bucles/ej3tmultiplicar.php">3 Tabla de multiplicar</a></p>
+<p><a href="u3/bucles/ej4colores.php">4 Paleta de colores</a></p>
+<p><a href="u3/bucles/ej5calendario.php">5 Calendario</a></p>
+<br>
+<p><a href="portfoliopruebas/index.php">Proyecto ejemplo portfolio</a></p>
 </body>
 </html>

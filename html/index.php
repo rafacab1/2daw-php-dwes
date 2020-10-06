@@ -33,6 +33,8 @@
 <p><a href="u3/bucles/ej4colores.php">4 Paleta de colores</a></p>
 <p><a href="u3/bucles/ej5calendario.php">5 Calendario</a></p>
 <br>
+<p><a href="u3/arrays/ej0comunidades.php">1 Comunidades y Casos</a></p>
+<br>
 <p><a href="portfoliopruebas/index.php">Proyecto ejemplo portfolio</a></p>
 </body>
 </html>

@@ -2,12 +2,32 @@
 <html lang="es">
 
 <?PHP
+// Datos personales
 $nombre = "Rafa Caballero";
 $especialidad = "DWES";
 $mail = "a19caosra@iesgrancapitan.org";
 $phone = "612345678";
 $linkedin = "rafacab.dev";
-$twitter = "@rafacab.dev"
+$twitter = "@rafacab.dev";
+
+// Experiencia laboral
+$expLaboral = array(
+  array(
+    "titulo"=>"PHP Developer",
+    "descripcion"=>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos eveniet placeat est quia unde, inventore esse laudantium ipsum, officiis error animi, minima in non minus nam nostrum quos. Minus.",
+    "logros"=>array("Fui a clase","Estoy haciendo esto","Lorem ipsum dolor sit amet")
+  ),
+  array(
+    "titulo"=>"Javascript Developer",
+    "descripcion"=>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos eveniet placeat est quia unde, inventore esse laudantium ipsum, officiis error animi, minima in non minus nam nostrum quos. Minus.",
+    "logros"=>array("Fui a clase","Estoy haciendo esto, aunque no es JS","Lorem ipsum dolor sit amet")
+  ),
+  array(
+    "titulo"=>"DAW",
+    "descripcion"=>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eos eveniet placeat est quia unde, inventore esse laudantium ipsum, officiis error animi, minima in non minus nam nostrum quos. Minus.",
+    "logros"=>array("Fui a clase","Estoy haciendo esto para clase","Lorem ipsum dolor sit amet")
+  )
+  );
 ?>
 
 <head>
@@ -54,36 +74,21 @@ $twitter = "@rafacab.dev"
         <div>
           <h3 class="border-bottom-gray" >Work Experience</h3>
           <ul>
-            <li class="work-position">
-              <h5>PHP Developer</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-              <strong>Achievements:</strong>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-              </ul>
-            </li>
-            <li class="work-position">
-                <h5>PHP Developer</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-                <strong>Achievements:</strong>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                </ul>
-              </li>
-              <li class="work-position">
-                  <h5>PHP Developer</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-                  <strong>Achievements:</strong>
-                  <ul>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  </ul>
-                </li>
+          <?php
+          // Experiencia laboral
+          foreach ($expLaboral as $a) {
+              echo("<li class=\"work-position\">");
+                echo("<h5>". $a["titulo"] ."</h5>");
+                echo("<p>". $a["descripcion"] . "</p>");
+                echo("<strong>Achievements:</strong>");
+                echo("<ul>");
+                foreach ($a["logros"] as $logro) {
+                  echo("<li>" . $logro . "</li>");
+                }
+                echo("</ul>");
+              echo("</li>");
+          }            
+          ?>
           </ul>
         </div>
         <div>

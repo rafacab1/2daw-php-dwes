@@ -1,33 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Comunidades</title>
-	<meta charset="UTF-8">
-</head>
-<body>
 <?php
 /**
     *   Hacer un array con las comunidades autónomas y sus provincias
     *
     *   @author Rafa Caballero
     */
-/*$comunidades = array(
-    "Andalucía"=>array("Córdoba", "Huelva", "Cádiz", "Sevilla", "Málaga", "Granada", "Jaén", "Almería"),
-    "CastillaLeón"=>array("León", "Zamora", "Salamanca", "Valladolid", "Palencia", "Ávila", "Segovia", "Burgos", "Soria"),
-    "Madrid"=>array("Madrid"),
-    "Murcia"=>array("Murcia"),
-    "Galicia"=>array("A Coruña", "Ourense", "Lugo", "Pontevedra"),
-    "Extremadura"=>array("Cáceres", "Badajoz"),
-    "CastillalaMancha"=>array("Guadalajara", "Toledo", "Cuenca", "Ciudad Real", "Albacete")
-);
-
-foreach ($comunidades as $clave => $valor) {
-    echo("<h1>".$clave."</h1>");
-    foreach ($valor as $provincia) {
-        echo("<p>".$provincia."</p>");
-    }
-}*/
-
 $comunidades = array(
     array("comunidad"=>"Andalucía", "provincias"=> array("Córdoba"=>7223, "Huelva"=>1611, "Cádiz"=>480, "Sevilla"=>12990, "Málaga"=>16458, "Granada"=>8622, "Jaén"=>322, "Almería"=>8266)),
     array("comunidad"=>"Aragón", "provincias"=>array("Huesca"=>251, "Teruel"=>1633, "Zaragoza"=>2512)),
@@ -46,7 +22,16 @@ $comunidades = array(
     array("comunidad"=>"País Vasco", "provincias"=>array("Bilbao"=>124, "San Sebastián"=>8124, "Vitoria"=>259)),
     array("comunidad"=>"La Rioja", "provincias"=>array("Logroño"=>1081))
 );
+?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comunidades</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<?php
 foreach ($comunidades as $comunidad) {
     $acumulados = 0;
     echo("<h1>".$comunidad["comunidad"]."</h1>");
@@ -62,7 +47,6 @@ foreach ($comunidades as $comunidad) {
     echo("<p><i>Casos totales en " . $comunidad["comunidad"] . "</i> → " . $acumulados ."</p>");
 
 }
-
 ?>
 </body>
 </html>

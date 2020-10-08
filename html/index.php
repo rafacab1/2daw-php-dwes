@@ -33,7 +33,12 @@
 <p><a href="u3/bucles/ej4colores.php">4 Paleta de colores</a></p>
 <p><a href="u3/bucles/ej5calendario.php">5 Calendario</a></p>
 <br>
-<p><a href="u3/arrays/ej0comunidades.php">1 Comunidades y Casos</a></p>
+<p><a href="u3/arrays/ej0comunidades.php">0 Comunidades y Casos</a></p>
+<p><a href="u3/arrays/ej1/ej1meses.php">1.1 Meses</a></p>
+<p><a href="u3/arrays/ej1/ej2tablero.php">1.2 Tablero</a></p>
+<p><a href="u3/arrays/ej1/ej3notas.php">1.3 Notas</a></p>
+<p><a href="u3/arrays/ej1/ej4verbos.php">1.4 Verbos Irregulares</a></p>
+<p><a href="u3/arrays/ej1/ej5paises.php">1.5 Países</a></p>
 <br>
 <p><a href="portfoliopruebas/index.php">Proyecto ejemplo portfolio</a></p>
 </body>

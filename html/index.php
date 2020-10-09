@@ -1,3 +1,55 @@
+<?php
+/** 
+ * Ejercicios DWES
+ * 
+ * @author Rafa Caballero
+ */
+
+$ejercicios = array(
+	// UNIDAD 2
+	array("unidad"=>"2", "categoría"=> "", "ejercicios"=>array(
+		array("ejercicio"=>"Ficha personal", "direccion"=>"u2/a2/fichapersonal.php"),
+		array("ejercicio"=>"2 Area", "direccion"=>"u2/a2/area.php"),
+		array("ejercicio"=>"3 Suma", "direccion"=>"u2/a2/suma.php"),
+		array("ejercicio"=>"4 Cálculos con variables", "direccion"=>"u2/a2/calculos.php"),
+		array("ejercicio"=>"5 Cálculos con variables 2", "direccion"=>"u2/a2/calculos2.php"),
+		array("ejercicio"=>"6 Información de variables", "direccion"=>"u2/a2/ej6contenidovar.php"),
+		array("ejercicio"=>"7 Información de variables 2", "direccion"=>"u2/a2/ej7tiposvar.php")
+	)),
+	// UNIDAD 3 - Estructuras de control
+	array("unidad"=>"3", "categoría"=> "Estructuras de control", "ejercicios"=>array(
+		array("ejercicio"=>"1 Número mayor", "direccion"=>"u3/estructurascontrol/ej1nmayor.php"),
+		array("ejercicio"=>"2 Días mes", "direccion"=>"u3/estructurascontrol/ej2calcdiames.php"),
+		array("ejercicio"=>"3 Edad", "direccion"=>"u3/estructurascontrol/ej3edad.php"),
+		array("ejercicio"=>"4 Cabecera", "direccion"=>"u3/estructurascontrol/ej4cabecera.php"),
+		array("ejercicio"=>"5 Perfiles de usuario", "direccion"=>"u3/estructurascontrol/ej5usuarios.php")
+	)),
+	// UNIDAD 3 - Bucles
+	array("unidad"=>"3", "categoría"=> "Bucles", "ejercicios"=>array(
+		array("ejercicio"=>"1 Números del 1 al 10", "direccion"=>"u3/bucles/ej1num110.php"),
+		array("ejercicio"=>"2 Números pares", "direccion"=>"u3/bucles/ej2numpares.php"),
+		array("ejercicio"=>"3 Tabla de multiplicar", "direccion"=>"u3/bucles/ej3tmultiplicar.php"),
+		array("ejercicio"=>"4 Paleta de colores", "direccion"=>"u3/bucles/ej4colores.php"),
+		array("ejercicio"=>"5 Calendario", "direccion"=>"u3/bucles/ej5calendario.php")
+	)),
+	// UNIDAD 3 - Arrays
+	array("unidad"=>"3", "categoría"=> "Arrays", "ejercicios"=>array(
+		array("ejercicio"=>"0 Comunidades y Casos", "direccion"=>"u3/arrays/ej0comunidades.php"),
+		array("ejercicio"=>"3.1 Meses", "direccion"=>"u3/arrays/ej3/ej1meses.php"),
+		array("ejercicio"=>"3.2 Tablero", "direccion"=>"u3/arrays/ej3/ej2tablero.php"),
+		array("ejercicio"=>"3.3 Notas", "direccion"=>"u3/arrays/ej3/ej3notas.php"),
+		array("ejercicio"=>"3.4 Verbos Irregulares", "direccion"=>"u3/arrays/ej3/ej4verbos.php"),
+		array("ejercicio"=>"3.5 Países", "direccion"=>"u3/arrays/ej3/ej5paises.php"),
+		array("ejercicio"=>"6 Restaurante", "direccion"=>"u3/arrays/ej6restaurante.php"),
+		array("ejercicio"=>"7 Calendario", "direccion"=>"u3/bucles/ej5calendario.php"),
+		array("ejercicio"=>"8 Ventas", "direccion"=>"u3/arrays/ej8mediaventas.php"),
+		array("ejercicio"=>"9 Máximo y media", "direccion"=>"u3/arrays/ej9mayormedia.php"),
+
+	))
+);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,32 +65,16 @@
 
 <p><a href="info.php">Info PHP</a></p>
 <br>
-<p><a href="u2/a2/fichapersonal.php">1 Ficha Personal</a></p>
-<p><a href="u2/a2/area.php">2 Área</a></p>
-<p><a href="u2/a2/suma.php">3 Suma</a></p>
-<p><a href="u2/a2/calculos.php">4 Cálculos con variables</a></p>
-<p><a href="u2/a2/calculos2.php">5 Cálculos con variables 2</a></p>
-<p><a href="u2/a2/ej6contenidovar.php">6 Información de variables</a></p>
-<p><a href="u2/a2/ej7tiposvar.php">7 Información de variables 2</a></p>
-<br>
-<p><a href="u3/estructurascontrol/ej1nmayor.php">1 Número Mayor</a></p>
-<p><a href="u3/estructurascontrol/ej2calcdiames.php">2 Días mes</a></p>
-<p><a href="u3/estructurascontrol/ej3edad.php">3 Edad</a></p>
-<p><a href="u3/estructurascontrol/ej4cabecera.php">4 Cabecera</a></p>
-<p><a href="u3/estructurascontrol/ej5usuarios.php">5 Perfiles de usuario</a></p>
-<br>
-<p><a href="u3/bucles/ej1num110.php">1 Números del 1 al 10</a></p>
-<p><a href="u3/bucles/ej2numpares.php">2 Números pares</a></p>
-<p><a href="u3/bucles/ej3tmultiplicar.php">3 Tabla de multiplicar</a></p>
-<p><a href="u3/bucles/ej4colores.php">4 Paleta de colores</a></p>
-<p><a href="u3/bucles/ej5calendario.php">5 Calendario</a></p>
-<br>
-<p><a href="u3/arrays/ej0comunidades.php">0 Comunidades y Casos</a></p>
-<p><a href="u3/arrays/ej1/ej1meses.php">1.1 Meses</a></p>
-<p><a href="u3/arrays/ej1/ej2tablero.php">1.2 Tablero</a></p>
-<p><a href="u3/arrays/ej1/ej3notas.php">1.3 Notas</a></p>
-<p><a href="u3/arrays/ej1/ej4verbos.php">1.4 Verbos Irregulares</a></p>
-<p><a href="u3/arrays/ej1/ej5paises.php">1.5 Países</a></p>
+<?php
+
+foreach ($ejercicios as $unidad) {
+	echo("<h1>Unidad " . $unidad["unidad"] . "</h1>");
+	echo("<h3>" . $unidad["categoría"] . "</h3>");
+	foreach ($unidad["ejercicios"] as $ejercicio) {
+		echo("<p><a href=\"" . $ejercicio["direccion"] . "\">" . $ejercicio["ejercicio"] . "</a></p>");
+	}
+}
+?>
 <br>
 <p><a href="portfoliopruebas/index.php">Proyecto ejemplo portfolio</a></p>
 </body>

@@ -18,7 +18,7 @@
     <form action="procesa_formulario1.php" method="post">
         <?php
         foreach ($datosPersonales as $a) {
-            echo("<input type=\"text\" name=\"" . $a . "\" placeholder=\"" . $a . "\" value=\"\">");
+            echo("<input type=\"text\" name=\"" . $a . "\" placeholder=\"" . $a . "\" value=\"\" required>");
         }
         ?>
         <input type="submit" name="enviar" value="Send">

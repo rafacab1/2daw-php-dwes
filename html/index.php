@@ -45,6 +45,13 @@ $ejercicios = array(
 		array("ejercicio"=>"8 Ventas", "direccion"=>"u3/arrays/ej8mediaventas.php"),
 		array("ejercicio"=>"9 Máximo y media", "direccion"=>"u3/arrays/ej9mayormedia.php"),
 
+	)),
+	// UNIDAD 3 - Formularios
+	array("unidad"=>"3", "categoría"=> "Formularios", "ejercicios"=>array(
+		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u3/formularios/ejemplos/ejemplo1.php"),
+		array("ejercicio"=>"Ejemplo 2", "direccion"=>"u3/formularios/ejemplos/ejemplo2.php"),
+		array("ejercicio"=>"Ejemplo 3", "direccion"=>"u3/formularios/ejemplos/ejemplo3.php"),
+		array("ejercicio"=>"Ejemplo 4", "direccion"=>"u3/formularios/ejemplos/ejemplo4.php")
 	))
 );
 
@@ -67,7 +74,7 @@ $ejercicios = array(
 <br>
 <?php
 
-foreach ($ejercicios as $unidad) {
+foreach (array_reverse($ejercicios) as $unidad) {
 	echo("<h1>Unidad " . $unidad["unidad"] . "</h1>");
 	echo("<h3>" . $unidad["categoría"] . "</h3>");
 	foreach ($unidad["ejercicios"] as $ejercicio) {

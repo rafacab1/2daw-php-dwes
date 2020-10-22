@@ -16,11 +16,13 @@
      
     // Datos iniciales
     $nombre=$email=$url=$comentarios=$generoSelect=$transporteSelect=$opcionUnica = "";
-    $marcaCoche;
+    $marcaCoche = array();
     $msgErrorNombre=$msgErrorEmail = "";
     $procesaFormulario = false;
+    $errorNombre = false;
+    $errorEmail = false;
 
-    $texts = array("Nombre", "Email");
+    // Arrays
     $genero = array("Hombre", "Mujer", "Otro");
     $transporte = array("Bicicleta", "Coche", "Otro");
     $opcionesUni = array("o1" => "Opción 1", "o2" => "Opción 2", "o3" => "Opción 3", "o4" => "Opción 4");
@@ -44,7 +46,6 @@
 </head>
 <body>
 <h1>Validación formulario. PHP</h1>
-<h5>* Campos requeridos</h5>
 
 <?php
 
@@ -63,20 +64,26 @@
                 $marcaCoche[$i] = clearData($_POST['opcionMul'][$i]); 
             }
         }
+
         $ProcesaFormulario = true;
+        $errorNombre = false;
+        $errorEmail = false;
 
         // Validar nombre
         if (empty($nombre)) {
             $msgErrorNombre = "Nombre requerido";
+            $errorNombre = true;
             $ProcesaFormulario = false;
         }
 
         // Validar email
         if (empty($email)) {
             $msgErrorEmail = "Email requerido";
+            $errorEmail = true;
             $ProcesaFormulario = false;
         } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $msgErrorEmail = "Email incorrecto";
+            $errorEmail = true;
             $ProcesaFormulario = false;
             $_POST['email'] = "";
         }        
@@ -94,12 +101,21 @@
       	echo "<br>" . $marcaCoche[$i]; 
       	} 
     } else {
+        echo ("<h5>* Campos requeridos</h5>");
         echo "<form method=\"post\" action=\"" . $SERVER['PHP_SELF'] . "\">";
-
-        // Nombre y email
-        foreach ($texts as $campo) {
-            echo $campo . " <input type=\"text\" name=\"" . strtolower($campo) . "\" placeholder=\"" . $campo . "\" value=\"" . $_POST[$campo] . "\" required>*<br>";
+        // Nombre
+        if ($errorNombre) {
+            echo "Nombre <input type=\"text\" name=\"nombre\" placeholder=\"Nombre\" value=\"" . $_POST['nombre'] . "\" style=\"border: 1px solid red\">* " . $msgErrorNombre . "<br>";
+        } else {
+            echo "Nombre <input type=\"text\" name=\"nombre\" placeholder=\"Nombre\" value=\"" . $_POST['nombre'] . "\">*<br>";
         }
+        // Email
+        if ($errorEmail) {
+            echo "Email <input type=\"text\" name=\"email\" placeholder=\"Email\" value=\"" . $_POST['email'] . "\" style=\"border: 1px solid red\">* " . $msgErrorEmail . "<br>";
+        } else {
+            echo "Email <input type=\"text\" name=\"email\" placeholder=\"Email\" value=\"" . $_POST['email'] . "\">*<br>";
+        }
+
         // URL
         echo ("URL <input type=\"url\" name=\"url\" placeholder=\"URL\" value=\"" . $_POST['url'] . "\"><br>");
         // Comentarios
@@ -133,8 +149,6 @@
 
         // Botón enviar
         echo ("<br><input type=\"submit\" name=\"enviar\" value=\"Enviar\">");
-
-        echo ("<br>" . $msgErrorNombre . "<br>" . $msgErrorApellidos . "<br>" . $msgErrorEmail);
         echo "</form>";
     }
 

@@ -48,6 +48,7 @@ $ejercicios = array(
 	)),
 	// UNIDAD 3 - Formularios
 	array("unidad"=>"3", "categoría"=> "Formularios", "ejercicios"=>array(
+		array("ejercicio"=>"Irregular Verbs!", "direccion"=>"u3/formularios/irregularverbs"),
 		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u3/formularios/ejemplos/ejemplo1.php"),
 		array("ejercicio"=>"Ejemplo 2", "direccion"=>"u3/formularios/ejemplos/ejemplo2.php"),
 		array("ejercicio"=>"Ejemplo 3", "direccion"=>"u3/formularios/ejemplos/ejemplo3.php"),

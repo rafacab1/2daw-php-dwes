@@ -53,6 +53,16 @@ $ejercicios = array(
 		array("ejercicio"=>"Ejemplo 2", "direccion"=>"u3/formularios/ejemplos/ejemplo2.php"),
 		array("ejercicio"=>"Ejemplo 3", "direccion"=>"u3/formularios/ejemplos/ejemplo3.php"),
 		array("ejercicio"=>"Ejemplo 4", "direccion"=>"u3/formularios/ejemplos/ejemplo4.php")
+	)),
+	// UNIDAD 3 - Funciones
+	array("unidad"=>"3", "categoría"=> "Funciones", "ejercicios"=>array(
+		array("ejercicio"=>"Ejemplo 0", "direccion"=>"u3/funciones/ejemplos/ejemplo0.php"),
+		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u3/funciones/ejemplos/ejemplo1.php"),
+		array("ejercicio"=>"1 DNI", "direccion"=>"u3/funciones/ej1letraDNI.php"),
+		array("ejercicio"=>"2 Factorizar", "direccion"=>"u3/funciones/ej2Factorizar.php"),
+		array("ejercicio"=>"3 Generar nombre", "direccion"=>"u3/funciones/ej3genNombre.php"),
+		array("ejercicio"=>"4 Suma Dígitos", "direccion"=>"u3/funciones/ej4sumaDig.php"),
+		array("ejercicio"=>"5 Lista enlaces", "direccion"=>"u3/funciones/ej5listaEnlaces.php")
 	))
 );
 

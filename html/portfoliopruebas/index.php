@@ -28,6 +28,23 @@ $expLaboral = array(
     "logros"=>array("Fui a clase","Estoy haciendo esto para clase","Lorem ipsum dolor sit amet")
   )
   );
+
+  function muestraTrabajos($arrayTrabajos) {
+    foreach ($arrayTrabajos as $a) {
+      echo("<li class=\"work-position\">");
+        echo("<h5>". $a["titulo"] ."</h5>");
+        echo("<p>". $a["descripcion"] . "</p>");
+        echo("<strong>Achievements:</strong>");
+        echo("<ul>");
+        foreach ($a["logros"] as $logro) {
+          echo("<li>" . $logro . "</li>");
+        }
+        echo("</ul>");
+      echo("</li>");
+  }  
+}
+
+
 ?>
 
 <head>
@@ -76,18 +93,7 @@ $expLaboral = array(
           <ul>
           <?php
           // Experiencia laboral
-          foreach ($expLaboral as $a) {
-              echo("<li class=\"work-position\">");
-                echo("<h5>". $a["titulo"] ."</h5>");
-                echo("<p>". $a["descripcion"] . "</p>");
-                echo("<strong>Achievements:</strong>");
-                echo("<ul>");
-                foreach ($a["logros"] as $logro) {
-                  echo("<li>" . $logro . "</li>");
-                }
-                echo("</ul>");
-              echo("</li>");
-          }            
+          muestraTrabajos($expLaboral);
           ?>
           </ul>
         </div>

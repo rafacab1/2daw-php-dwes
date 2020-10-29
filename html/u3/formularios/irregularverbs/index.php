@@ -29,6 +29,9 @@
  // Array con los verbos que se usarán
  $verbosUsados = array();
 
+ // Array con las respuestas
+ $respuestas = array();
+
  // Array con TODOS los verbos
  $verbos = array(
     array("arise", "arose", "arisen", "levantarse"),
@@ -148,17 +151,61 @@ if (!$enActividad) {
             // TODO: Controlar que no se repitan los verbos
         }
 
+        echo ("<form method=\"post\" action=\"" . $SERVER['PHP_SELF'] . "\">");
         foreach ($verbosUsados as $vbjg) {
-            if ($difEsc = "Fácil") {
+            if ($difEsc == "Fácil") {
                 // Número aleatorio del 0 al 3
+                $randomFac = rand(0, 3);
+                foreach ($vbjg as $indice => $verbo) {
+                        if ($indice == $randomFac) {
+                            array_push($respuestas, $verbo[$i]);
+                            echo ("<input type=\"text\" name=\"respuesta\">");
+                        } else {
+                            echo ("<input type=\"text\" value=\"" . $verbo . "\">");
+                        }
+                }
+                echo ("<br>");
             }
-            if ($difEsc = "Medio") {
+            if ($difEsc == "Medio") {
                 // Dos números aleatorios del 0 al 3 que no se repiten
+                $randomMed1 = rand(0, 3);
+                $randomMed2 = rand(0, 3);
+                while ($randomMed1 == $randomMed2) {
+                    $randomMed2 = rand(0, 3);
+                }
+                foreach ((array) $vbjg as $indice => $verbo) {
+                    if ($indice == $randomMed1 || $indice == $randomMed2) {
+                        array_push($respuestas, $verbo[$i]);
+                        echo ("<input type=\"text\" name=\"respuesta\">");
+                    } else {
+                        echo ("<input type=\"text\" value=\"" . $verbo . "\">");
+                    }
+                }
+                echo ("<br/>");
             }
-            if ($difEsc = "Difícil") {
+            if ($difEsc == "Difícil") {
                 // Tres números aleatorios del 0 al 3 que no se repiten
+                $randomDif1 = rand(0, 3);
+                $randomDif2 = rand(0, 3);
+                $randomDif3 = rand(0, 3);
+                while ($randomDif1 == $randomDif2 && $randomDif2 == $randomDif3 && $randomDif1 == $randomDif3) {
+                    $randomDif2 = rand(0, 3);
+                    $randomDif3 = rand(0, 3);
+                }
+                // TODO: Comprobar porque en ocasiones salen 2 huecos en vez de 3
+                foreach ((array) $vbjg as $indice => $verbo) {
+                    if ($indice == $randomDif1 || $indice == $randomDif2 || $indice == $randomDif3) {
+                        array_push($respuestas, $verbo[$i]);
+                        echo ("<input type=\"text\" name=\"respuesta\">");
+                    } else {
+                        echo ("<input type=\"text\" value=\"" . $verbo . "\">");
+                    }
+                }
+                echo ("<br/>");
             }
         }
+        echo ("<br><input type=\"submit\" name=\"enviar\" value=\"Enviar\">");
+        echo ("</form>");
     }   
 }
 ?>

@@ -32,6 +32,7 @@ function verEnlaces($enlaces) {
     <title>Ejercicio 4 Sumar dígitos</title>
 </head>
 <body>
+<p>Nota: El funcionamiento de este ejercicio también está aplicado en la página principal</p>
 <?php
     verEnlaces($enlaces);
 ?>

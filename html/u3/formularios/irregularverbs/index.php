@@ -123,7 +123,7 @@ if (isset($_POST['comenzar'])) {
 if (!$enActividad) {
     // Número de verbos
     echo ("<form method=\"post\" action=\"" . $SERVER['PHP_SELF'] . "\">");
-    echo ("<input type=\"number\" name=\"nVerbos\" placeholder=\"Introduce el número de verbos\" min=\"1\" max=\"" . count($verbos) .  "\" value=\"1\">");
+    echo ("<input type=\"number\" name=\"nVerbos\" placeholder=\"Introduce el número de verbos\" min=\"1\" max=\"" . count($verbos) .  "\" value=\"5\">");
 
     // Nivel de dificultad
     echo ("<select name=\"dificultad\">");
@@ -152,6 +152,7 @@ if (!$enActividad) {
         }
 
         echo ("<form method=\"post\" action=\"" . $SERVER['PHP_SELF'] . "\">");
+        echo ("<h3>" . $difEsc . "</h3>");
         foreach ($verbosUsados as $vbjg) {
             if ($difEsc == "Fácil") {
                 // Número aleatorio del 0 al 3
@@ -184,15 +185,17 @@ if (!$enActividad) {
                 echo ("<br/>");
             }
             if ($difEsc == "Difícil") {
+
                 // Tres números aleatorios del 0 al 3 que no se repiten
-                $randomDif1 = rand(0, 3);
-                $randomDif2 = rand(0, 3);
-                $randomDif3 = rand(0, 3);
-                while ($randomDif1 == $randomDif2 && $randomDif2 == $randomDif3 && $randomDif1 == $randomDif3) {
+                do {
+                    $randomDif1 = rand(0, 3);
                     $randomDif2 = rand(0, 3);
                     $randomDif3 = rand(0, 3);
-                }
+                } while (($randomDif1 == $randomDif2) && ($randomDif2 == $randomDif3) && ($randomDif1 == $randomDif3));
+                echo ($randomDif1 . " " . $randomDif2 . " " . $randomDif3);
                 // TODO: Comprobar porque en ocasiones salen 2 huecos en vez de 3
+
+
                 foreach ((array) $vbjg as $indice => $verbo) {
                     if ($indice == $randomDif1 || $indice == $randomDif2 || $indice == $randomDif3) {
                         array_push($respuestas, $verbo[$i]);

@@ -49,10 +49,12 @@ $ejercicios = array(
 	// UNIDAD 3 - Formularios
 	array("unidad"=>"3", "categoría"=> "Formularios", "ejercicios"=>array(
 		array("ejercicio"=>"Irregular Verbs!", "direccion"=>"u3/formularios/irregularverbs"),
-		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u3/formularios/ejemplos/ejemplo1.php"),
-		array("ejercicio"=>"Ejemplo 2", "direccion"=>"u3/formularios/ejemplos/ejemplo2.php"),
-		array("ejercicio"=>"Ejemplo 3", "direccion"=>"u3/formularios/ejemplos/ejemplo3.php"),
-		array("ejercicio"=>"Ejemplo 4", "direccion"=>"u3/formularios/ejemplos/ejemplo4.php")
+		array("ejercicio"=>"Formulario con POST", "direccion"=>"u3/formularios/ejemplos/ejemplo1.php"),
+		array("ejercicio"=>"Formulario con GET", "direccion"=>"u3/formularios/ejemplos/ejemplo2.php"),
+		array("ejercicio"=>"Formulario con validación", "direccion"=>"u3/formularios/ejemplos/ejemplo3.php"),
+		array("ejercicio"=>"Formulario Avanzado", "direccion"=>"u3/formularios/ejemplos/ejemplo4.php"),
+		array("ejercicio"=>"1 Calendario", "direccion"=>"u3/formularios/ej1calendario.php"),
+		array("ejercicio"=>"4 Suma números", "direccion"=>"u3/formularios/ej4sumaNumeros.php")
 	)),
 	// UNIDAD 3 - Funciones
 	array("unidad"=>"3", "categoría"=> "Funciones", "ejercicios"=>array(
@@ -81,7 +83,7 @@ $ejercicios = array(
 <h1>Desarrollo Web en Entorno Servidor</h1>
 <h3>de Rafa Caballero</h3>
 
-<p><a href="info.php">Info PHP</a></p>
+<p><a href="https://github.com/rafacab1/2daw-php-dwes/tree/master/html" target="__blank">Ver en GitHub</a></p>
 <br>
 <?php
 
@@ -89,7 +91,7 @@ foreach (array_reverse($ejercicios) as $unidad) {
 	echo("<h1>Unidad " . $unidad["unidad"] . "</h1>");
 	echo("<h3>" . $unidad["categoría"] . "</h3>");
 	foreach ($unidad["ejercicios"] as $ejercicio) {
-		echo("<p><a href=\"" . $ejercicio["direccion"] . "\">" . $ejercicio["ejercicio"] . "</a></p>");
+		echo("<p><a href=\"" . $ejercicio["direccion"] . "\" target=\"__blank\">" . $ejercicio["ejercicio"] . "</a></p>");
 	}
 }
 ?>

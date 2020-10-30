@@ -1,7 +1,5 @@
 <?php
-/**
- * PH → POR HACER
- * 
+/** 
  * 2. Escribe un script que permita factorizar 
  * un número pasado por la URL. 
  * Muestra el resultado en dos columnas.

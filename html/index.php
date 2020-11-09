@@ -65,6 +65,18 @@ $ejercicios = array(
 		array("ejercicio"=>"3 Generar nombre", "direccion"=>"u3/funciones/ej3genNombre.php"),
 		array("ejercicio"=>"4 Suma Dígitos", "direccion"=>"u3/funciones/ej4sumaDig.php"),
 		array("ejercicio"=>"5 Lista enlaces", "direccion"=>"u3/funciones/ej5listaEnlaces.php")
+	)),
+	// UNIDAD 4 - Cookies
+	array("unidad"=>"4", "categoría"=> "Cookies", "ejercicios"=>array(
+		array("ejercicio"=>"1 Cookies", "direccion"=>"u4/cookies/ej1cookies.php"),
+		array("ejercicio"=>"3 Formulario", "direccion"=>"u4/cookies/ej3formulario.php")
+	)),
+	// UNIDAD 4 - Sesiones
+	array("unidad"=>"4", "categoría"=> "Sesiones", "ejercicios"=>array(
+		array("ejercicio"=>"Ejemplo 0", "direccion"=>"u4/sesiones/ejemplo0.php"),
+		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u4/sesiones/ejemplo1.php"),
+		array("ejercicio"=>"Sesiones con límite de tiempo", "direccion"=>"u4/sesiones/ejClase/sesiones_ej1.php"),
+		array("ejercicio"=>"1 Agenda", "direccion"=>"u4/sesiones/ej1agenda")
 	))
 );
 

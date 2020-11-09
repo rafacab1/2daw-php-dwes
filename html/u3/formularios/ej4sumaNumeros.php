@@ -43,8 +43,9 @@
         for ($i=0; $i<=$cantidad; $i++) {
             $num = rand(1, 100);
             $acumulado += $num;
+            echo ($num . "<br/>");
         }
-        echo ($acumulado);
+        echo ("Total: " . $acumulado);
     }
     ?>
 </body>

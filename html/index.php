@@ -76,9 +76,16 @@ $ejercicios = array(
 		array("ejercicio"=>"Ejemplo 0", "direccion"=>"u4/sesiones/ejemplo0.php"),
 		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u4/sesiones/ejemplo1.php"),
 		array("ejercicio"=>"Sesiones con límite de tiempo", "direccion"=>"u4/sesiones/ejClase/sesiones_ej1.php"),
+		array("ejercicio"=>"Autenticación 1", "direccion"=>"u4/sesiones/ejClase2"),
 		array("ejercicio"=>"1 Agenda", "direccion"=>"u4/sesiones/ej1agenda")
 	))
 );
+
+if (isset($_COOKIE["conteo"])) {
+	setcookie("conteo", $_COOKIE['conteo'] + 1, time()+3600*24*365);
+} else {
+	setcookie("conteo", 1, time()+3600*24*365);
+}
 
 ?>
 
@@ -106,8 +113,9 @@ foreach (array_reverse($ejercicios) as $unidad) {
 		echo("<p><a href=\"" . $ejercicio["direccion"] . "\" target=\"__blank\">" . $ejercicio["ejercicio"] . "</a></p>");
 	}
 }
+
+echo ("<br/><p><a href=\"portfoliopruebas/index.php\">Proyecto ejemplo portfolio</a></p>");
+echo ("<br/><p>Has visitado este sitio " . $_COOKIE['conteo'] . " veces.</p>");
 ?>
-<br>
-<p><a href="portfoliopruebas/index.php">Proyecto ejemplo portfolio</a></p>
 </body>
 </html>

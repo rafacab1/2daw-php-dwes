@@ -20,7 +20,7 @@ function clearData($cadena) {
 
 if (isset($_POST['enviar'])) {
     $nombre = clearData($_POST['nombre']);
-    $telefono = clearData($_POST['telefono']);
+    $telefono = clearData($_POST['tlf']);
 
     // Meter datos a array
     array_push($_SESSION['agenda'], array($nombre => $telefono));
@@ -41,14 +41,15 @@ if (isset($_POST['enviar'])) {
     echo "<form method=\"post\" action=\"" . $SERVER['PHP_SELF'] . "\">";
         echo "<input type=\"text\" name=\"nombre\"/>";
         echo "<input type=\"text\" name=\"tlf\"/>";
-        echo "<input type=\"submit\" name=\"enviar\"/>";
+        echo "<input type=\"submit\" name=\"enviar\" value=\"Añadir\"/>";
     echo "</form>";
 
-    if ($procesado) {
-        foreach ($_SESSION['agenda'] as $clave => $valor) {
-            echo "Nombre → " . $clave . "<br/>Telefono → " . $valor;
+    foreach ($_SESSION['agenda'] as $persona) {
+        foreach ($persona as $clave => $valor) {
+            echo "Nombre → " . $clave . " | Telefono → " . $valor . "<br/>";
         }
     }
 ?>
+<br/><a href="salir.php">Borrar agenda</a>
 </body>
 </html>

@@ -77,7 +77,14 @@ $ejercicios = array(
 		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u4/sesiones/ejemplo1.php"),
 		array("ejercicio"=>"Sesiones con límite de tiempo", "direccion"=>"u4/sesiones/ejClase/sesiones_ej1.php"),
 		array("ejercicio"=>"Autenticación 1", "direccion"=>"u4/sesiones/ejClase2"),
-		array("ejercicio"=>"1 Agenda", "direccion"=>"u4/sesiones/ej1agenda")
+		array("ejercicio"=>"1 Agenda", "direccion"=>"u4/sesiones/ej1agenda"),
+		array("ejercicio"=>"2 Notas DWES", "direccion"=>"u4/sesiones/ej2notas"),
+		array("ejercicio"=>"Buscaminas", "direccion"=>"u4/sesiones/buscaminas")
+	)),
+	// UNIDAD 4 - Ficheros
+	array("unidad"=>"4", "categoría"=> "Ficheros", "ejercicios"=>array(
+		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u4/ficheros/ejemplo1"),
+		array("ejercicio"=>"1 Script usuarios", "direccion"=>"u4/ficheros/ej1Usuarios")
 	))
 );
 

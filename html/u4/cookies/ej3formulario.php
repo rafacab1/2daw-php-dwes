@@ -6,10 +6,13 @@
  * @author Rafa Caballero
  */
 
- $cookieEnabled = false;
+ session_start();
+ if (!isset($_SESSION['cookieEnabled'])) {
+     $_SESSION['cookieEnabled'] = false;
+ }
 
- if ($_POST["recordar"] == "on") {
-    $cookieEnabled = true;
+ if ($_POST["recordar"] == "true") {
+    $_SESSION['cookieEnabled'] = true;
     if (isset($_POST["user"])) {
         setcookie("user", $_POST["user"], time()+1000);
     }
@@ -17,10 +20,10 @@
     if (isset($_POST["pass"])) {
         setcookie("pass", $_POST["pass"], time()+1000);
     }
- } elseif ($_POST["recordar"] == "off") {
+ } elseif ($_POST["recordar"] == "") {
     setcookie("user", $_COOKIE["user"], time()-1000);
     setcookie("pass", $_COOKIE["pass"], time()-1000);
-    $cookieEnabled = false;
+    $_SESSION['cookieEnabled'] = false;
  }
 
 ?>
@@ -35,8 +38,9 @@
 </head>
 <body>
 <?php
+    echo($_POST['recordar']);
     echo "<form method=\"post\" action=\"" . $SERVER['PHP_SELF'] . "\">";
-    if ($cookieEnabled) {
+    if ($_SESSION['cookieEnabled']) {
         echo "<input type=\"text\" name=\"user\" placeholder=\"Usuario\" value=\"" . $_COOKIE["user"] . "\"><br/>";
         echo "<input type=\"password\" name=\"pass\" placeholder=\"Contraseña\" value=\"" . $_COOKIE["pass"] . "\"><br/>";
         echo "<input type=\"checkbox\" name=\"recordar\" value=\"true\"/>";

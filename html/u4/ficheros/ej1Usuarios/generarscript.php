@@ -8,8 +8,9 @@
  $alumnos = fopen($_FILES['file']['tmp_name'], "r"); // TODO: Controlar tipo de fichero
  $promocion = $_POST['promocion'];
  $curso = $_POST['curso'];
+ $usus = array();
 
- function generaUser($nombre) {
+ function generaUser($nombre, array & $usus) {
     $nombre = quitarTildes($nombre);
     // Apellido 1 AAxxxx
     $a1 = strtolower(substr($nombre, 0, 2));
@@ -17,6 +18,12 @@
     $a2 = strtolower(substr($nombre, strpos($nombre, " ")+1, 2));
     // Nombre xxxxAA
     $n = strtolower(substr($nombre, strpos($nombre, ",")+2, 2));
+    $u = $a1 . $a2 . $n;
+    // TODO: Controlar repetidos, aún no funciona :(
+    while (in_array($u, $usus)) {
+        $u = $u . "1";
+    }
+    array_push($usus, $u);
     return $a1 . $a2 . $n;
  }
 
@@ -51,7 +58,7 @@
  if (isset($mysql)) {
     $alumno = fgets($alumnos);
     do {
-        $user = generaUser($alumno);
+        $user = generaUser($alumno, $usus);
         fputs($script, "-- " . $alumno);
         fputs($script, "CREATE USER '" . $user . "'@'localhost' IDENTIFIED BY '" . $user . "';\n");
         fputs($script, "GRANT ALL PRIVILEGES ON " . $user . " . " . $user . " TO '" . $user . "'@'localhost';\n");
@@ -65,7 +72,7 @@
      fputs($script, "#!/bin/bash\n\n");
      $alumno = fgets($alumnos);
      do {
-         $user = generaUser($alumno);
+         $user = generaUser($alumno, $usus);
          fputs($script, "# " . $alumno);
          fputs($script, "groupadd " . $user . "\n");
          fputs($script, "useradd " . $user . " -m -d /home/" . $curso . $promocion . "/" . $user . " -s /bin/bash -g " . $user . " -p " . $user . "\n");

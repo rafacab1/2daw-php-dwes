@@ -1,0 +1,10 @@
+{
+    "name" : "app/siete-y-media",
+    "description": "Juego de las siete y media en PHP",
+    "autoload": {
+        "psr-4": {
+            "App\\models\\": "app/models"
+        }
+    },
+    "require": {}
+}

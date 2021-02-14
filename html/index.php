@@ -84,7 +84,17 @@ $ejercicios = array(
 	// UNIDAD 4 - Ficheros
 	array("unidad"=>"4", "categoría"=> "Ficheros", "ejercicios"=>array(
 		array("ejercicio"=>"Ejemplo 1", "direccion"=>"u4/ficheros/ejemplo1"),
-		array("ejercicio"=>"1 Script usuarios", "direccion"=>"u4/ficheros/ej1Usuarios")
+		array("ejercicio"=>"1 Script usuarios", "direccion"=>"u4/ficheros/ej1Usuarios"),
+	)),
+	// UNIDAD 4 - Ficheros
+	array("unidad"=>"1-4", "categoría"=> "Examen Diciembre 2020", "ejercicios"=>array(
+		array("ejercicio"=>"Ejercicio 1 - Test Autoescuela", "direccion"=>"examenes/dic2020/ej1"),
+		array("ejercicio"=>"Ejercicio 2 - Gestión de multas", "direccion"=>"examenes/dic2020/ej2")
+	)),
+	// UNIDAD 5 - Objetos
+	array("unidad"=>"5", "categoría"=> "Objetos", "ejercicios"=>array(
+		array("ejercicio"=>"Mascota", "direccion"=>"u5/mascotas_autoload/"),
+		array("ejercicio"=>"Siete y media", "direccion"=>"u5/sieteymedia")
 	))
 );
 

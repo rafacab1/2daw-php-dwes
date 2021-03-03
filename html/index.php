@@ -91,11 +91,23 @@ $ejercicios = array(
 		array("ejercicio"=>"Ejercicio 1 - Test Autoescuela", "direccion"=>"examenes/dic2020/ej1"),
 		array("ejercicio"=>"Ejercicio 2 - Gestión de multas", "direccion"=>"examenes/dic2020/ej2")
 	)),
-	// UNIDAD 5 - Objetos
-	array("unidad"=>"5", "categoría"=> "Objetos", "ejercicios"=>array(
-		array("ejercicio"=>"Mascota", "direccion"=>"u5/mascotas_autoload/"),
-		array("ejercicio"=>"Siete y media", "direccion"=>"u5/sieteymedia")
-	))
+	// UNIDAD 5 - POO
+	array("unidad"=>"5", "categoría"=> "POO", "ejercicios"=>array(
+		array("ejercicio"=>"Mascota", "direccion"=>"u5/mascotas_autoload/")
+	)),
+	// UNIDAD 6 - Bases de Datos
+	array("unidad"=>"6", "categoría"=>"Bases de datos", "ejercicios"=>array(
+		array("ejercicio"=>"Superhéroes", "direccion"=>"u6/ejemplosClase/porClases/index.php")
+	)),
+	// UNIDAD Servicios WEB
+	array("unidad"=>"7", "categoría"=>"Servicios Web", "ejercicios"=>array(
+		array("ejercicio"=>"Superhéroes con AJAX", "direccion"=>"ajax/Superheroes/")
+	)),
+	// Unidad proyectos
+	array("unidad"=>"de proyectos", "categoría"=>"Symblog y Jobeet", "ejercicios"=>array(
+		array("ejercicio"=>"Symblog", "direccion"=>"https://symblog-rafacab.herokuapp.com"),
+		array("ejercicio"=>"Jobeet", "direccion"=>"https://symblog-rafacab.herokuapp.com") // TODO: Modificar dirección
+	)),
 );
 
 if (isset($_COOKIE["conteo"])) {
